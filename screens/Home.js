@@ -5,8 +5,11 @@ import { FontAwesome } from '@expo/vector-icons';
 import colors from '../colors';
 import { Entypo } from '@expo/vector-icons';
 import Tabs from '../navigation/tabs';
+import FindScreen from '../screens/FindScreen';
+
 
 import { auth } from '../config/firebase'
+
 
 const Home = () => {
 
@@ -31,10 +34,12 @@ const Home = () => {
           .catch(error => alert(error.message))
       }
       
+      
 
     return (   
-             <NavigationContainer independent={true}>
-             <Tabs />
+             <NavigationContainer 
+             independent={true}>
+             <Tabs />     
              </NavigationContainer>
     );
     };

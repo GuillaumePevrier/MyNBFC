@@ -1,26 +1,31 @@
-import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { Button, Image, View } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
 
-const FindScreen = ({navigation}) => {
-	return (
-		<View style={styles.container}>
-			<Text>Find Screen</Text>
-			<Button
-				title="Click Here"
-				onPress={() => alert('Button Clicked')}
-			/>
-		</View>
-);
-};
+export default function ImagePickerExample() {
+  const [imageUrl, setImageUrl] = useState(null);
 
+  const pickImage = async () => {
+	let result = await ImagePicker.launchImageLibraryAsync({
+	  mediaTypes: ImagePicker.MediaTypeOptions.All,
+	  allowsEditing: true,
+	  aspect: [4, 3],
+	  quality: 1,
+	});
 
-export default FindScreen;
+	console.log(result);
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center',
-		backgroundColor: '#F6F7FB'
-	},
-});
+	if (!result.cancelled) {
+	  setImageUrl(result.uri);
+	}
+  };
+
+  return (
+	<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+	  <Button title="Pick an image from camera roll" onPress={pickImage} />
+	  {imageUrl && (
+		<Image source={{ uri: imageUrl }} style={{ width: 200, height: 200 }} />
+	  )}
+	</View>
+  );
+}

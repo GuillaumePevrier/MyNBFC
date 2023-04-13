@@ -33,6 +33,7 @@ export default function Login({ navigation }) {
         autoFocus={true}
         value={email}
         onChangeText={(text) => setEmail(text)}
+        returnKeyType={'done'}
       />
       <TextInput
         style={[styles.input, styles.shadowProp]}
@@ -43,6 +44,7 @@ export default function Login({ navigation }) {
         textContentType="password"
         value={password}
         onChangeText={(text) => setPassword(text)}
+        returnKeyType={'done'}
       />
       <TouchableOpacity style={styles.button} onPress={onHandleLogin}>
         <Text style={{fontWeight: 'bold', color: '#fff', fontSize: 18}}> Connexion</Text>
@@ -92,10 +94,9 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     backgroundColor: '#F6F7FB',
-    borderTopLeftRadius: 60,
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
     borderColor: '#d4163a',
-    borderTopWidth: 1,
-    borderLeftWidth: 1,
   },
   form: {
     flex: 1,

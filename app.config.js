@@ -2,9 +2,10 @@ import 'dotenv/config';
 
 export default {
   "expo": {
-    "name": "ChatApp",
-    "slug": "ChatApp",
+    "name": "MyNBFC",
+    "slug": "MyNBFC",
     "version": "1.0.0",
+    "sdkVersion": "48.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -12,6 +13,10 @@ export default {
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "updates": {
       "fallbackToCacheTimeout": 0
     },

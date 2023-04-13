@@ -9,6 +9,7 @@ import Signup from './screens/Signup';
 import Home from './screens/Home';
 
 
+
 const Stack = createStackNavigator();
 const AuthenticatedUserContext = createContext({});
 
@@ -23,8 +24,8 @@ return (
 
 function ChatStack() {
   return (
-    <Stack.Navigator defaultScreenOptions={Home} >
-      <Stack.Screen name='NBFC Profil' component={Home} />
+    <Stack.Navigator defaultScreenOptions={Home}>
+      <Stack.Screen name='MyNBFC' component={Home} />
     </Stack.Navigator>
   );
 }
