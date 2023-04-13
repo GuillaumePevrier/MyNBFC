@@ -1,41 +1,64 @@
-# Chat App using React Native Expo and Firebase
+# Application de suivi des statistiques des joueurs de Noyal Brécé Football Club
 
+Cette application a été créée pour aider les entraîneurs et les responsables du club de foot de Noyal Brécé à suivre les statistiques des joueurs tout au long de la saison. Elle permet également de mettre à jour les statistiques des joueurs en temps réel, en utilisant la base de données Firebase Firestore et la bibliothèque React Native.
 
-- See a video tutorial showing how to clone this repository 👉🏼 [https://www.youtube.com/watch?v=iHrTQDHq1WI&t=385s](https://www.youtube.com/watch?v=iHrTQDHq1WI&t=385s)
+## Fonctionnalités
 
-- Check out the Tutorial 👉🏼 [https://www.youtube.com/watch?v=B6bKBiljKxU&t=323s](https://www.youtube.com/watch?v=B6bKBiljKxU&t=323s)
+- Affichage des statistiques des joueurs, notamment le nombre de buts marqués, le nombre de passes décisives, le temps de jeu total, etc.
+- Mise à jour en temps réel des statistiques des joueurs par les entraîneurs et les responsables du club, grâce à une interface simple et conviviale.
+- Affichage des informations sur les joueurs, y compris les noms, les photos, les positions et les numéros de maillot.
+- Tableau de bord pour les responsables du club, offrant un aperçu des performances de chaque joueur et des statistiques globales de l'équipe.
 
-## How to clone
+## Architecture de l'application
 
-Clone the repo
-```
-git clone https://github.com/betomoedano/ChatApp.git
-```
+L'application est développée en utilisant la bibliothèque React Native, qui permet de créer des applications mobiles pour iOS et Android en utilisant JavaScript et React. Elle utilise également la base de données Firebase Firestore, qui offre une base de données en temps réel pour stocker les statistiques des joueurs et autres informations.
 
-cd into the just created project and install dependencies with yarn
-```
-cd ChatApp && yarn
-```
+Voici un schéma représentant l'architecture de l'application :
 
-Add your firebase backend config in the `firebase.js` file
-```
-const firebaseConfig = {
-  apiKey: Constants.manifest.extra.apiKey,
-  authDomain: Constants.manifest.extra.authDomain,
-  projectId: Constants.manifest.extra.projectId,
-  storageBucket: Constants.manifest.extra.storageBucket,
-  messagingSenderId: Constants.manifest.extra.messagingSenderId,
-  appId: Constants.manifest.extra.appId,
-  databaseURL: Constants.manifest.extra.databaseURL
-};
-```
+![Architecture de l'application](https://i.imgur.com/5AK5FwN.png)
 
-Run the project
-```
-expo start
-```
+## Exemple d'interface utilisateur
 
-Congratulations 🎉 Now you have a functional Chat App working locally
+Voici un exemple d'interface utilisateur pour l'application :
 
-Subscribe to [my channel](https://youtube.com/c/BetoMoedano)
-![Miniature](https://user-images.githubusercontent.com/43630417/167732465-f02c0dea-48db-4e23-ab26-90ca69115251.png)
+![Interface utilisateur de l'application](https://i.imgur.com/KG8RyWV.png)
+
+## Comment utiliser l'application
+
+1. Clonez ce référentiel GitHub sur votre machine locale.
+
+git clone https://github.com/username/repo.git
+
+markdown
+Copy code
+
+2. Installez les dépendances nécessaires en utilisant la commande suivante :
+
+npm install ou expo install
+
+markdown
+Copy code
+
+3. Créez un projet Firebase Firestore, et configurez votre application avec les clés d'API Firebase.
+
+4. Lancez l'application en utilisant la commande suivante :
+
+npm start ou expo start
+
+less
+Copy code
+
+5. Ouvrez l'application sur votre téléphone ou sur un émulateur, et commencez à suivre les statistiques des joueurs du club de Noyal Bressée !
+
+## Contributeurs
+
+- Guillaume PEVRIER (@guillaume pevrier)
+- Didier (@Didier)
+
+## Licence
+
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails. 
+
+## Remerciements
+
+Nous tenons à remercier tous les joueurs, entraîneurs et responsables du club de Noyal Bressée pour leur soutien et leur collaboration tout au long de la création de cette application. Nous espérons que cela contribuera à améliorer les performances de l'équipe et à renforcer la communauté du club.
